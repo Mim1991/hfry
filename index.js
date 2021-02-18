@@ -114,8 +114,9 @@ gsap.to(".shadow", {
 
 //  Box Expansion on scroll
 gsap.to(".box-expand", {
-  width: 1400,
+  width: 1600,
   duration: 2,
+  backgroundColor: "#D0503F",
   scrollTrigger: {
     // markers: true,
     start: "top 50%",
@@ -132,7 +133,7 @@ ScrollTrigger.create({
   trigger: ".math-tag",
   start: "top 40%",
   endTrigger: ".presenter-tag",
-  end: "bottom bottom-=230",
+  end: "bottom bottom-=160",
   pin: true,
   pinSpacing: false,
   // markers: true,
@@ -141,15 +142,39 @@ ScrollTrigger.create({
 
 gsap.to(".math-tag", {
   color: "#dfd3c2",
-  opacity: 0.3,
+  opacity: 0,
   scrollTrigger: {
     start: "top 40%",
     // endTrigger: ".presenter-tag",
     end: "bottom 40%",
-    markers: true,
+    // markers: true,
     trigger: ".math-tag",
     scroller: ".banner",
     scrub: true,
+  },
+});
+
+gsap.from(".hf-pink", {
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".hf-pink",
+    scroller: ".banner",
+    start: "top 60%",
+    end: "bottom 40%",
+    // markers: true,
+  },
+});
+
+gsap.from(".maths-text", {
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".maths-text",
+    scroller: ".banner",
+    start: "top 60%",
+    end: "bottom 40%",
+    markers: true,
   },
 });
 
