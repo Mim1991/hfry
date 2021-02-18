@@ -29,6 +29,7 @@ ScrollTrigger.scrollerProxy(".banner", {
     : "fixed",
 });
 
+// Loading Screen
 gsap.from(".logo-screen", {
   paddingTop: 300,
   duration: 1,
@@ -47,8 +48,23 @@ gsap.to(
   2
 );
 
-gsap;
+gsap.fromTo(
+  ".hero-image",
+  {
+    y: -100,
+    scale: 0.9,
+    opacity: 0.5,
+  },
+  {
+    y: 0,
+    scale: 1,
+    duration: 3.5,
+    delay: 1,
+    opacity: 1,
+  }
+);
 
+// Headline Tags
 var tlTwo = gsap.timeline({
   delay: 2.4,
   // ease: Power1.easeIn,
@@ -59,12 +75,12 @@ tlTwo
     paddingTop: 180,
     opacity: 0,
     ease: Power1.easeInOut,
-    duration: 1,
+    duration: 1.2,
   })
   .from(
     ".ht-two",
-    { paddingTop: 180, opacity: 0, ease: Power1.easeInOut, duration: 1 },
-    "-=0.8"
+    { paddingTop: 180, opacity: 0, ease: Power1.easeInOut, duration: 1.2 },
+    "-=1"
   );
 
 // gsap.to(".color-change, .color-change h1", {
@@ -82,7 +98,21 @@ tlTwo
 //     scrub: true,
 //   },
 // });
+// Shadow box
+gsap.to(".shadow", {
+  height: 600,
+  scrollTrigger: {
+    // markers: true,
+    start: "top 80%",
+    end: "+=130",
+    ease: "Power1",
+    scroller: ".banner",
+    trigger: ".box-expand",
+    scrub: true,
+  },
+});
 
+//  Box Expansion on scroll
 gsap.to(".box-expand", {
   width: 1400,
   duration: 2,
@@ -97,8 +127,7 @@ gsap.to(".box-expand", {
   },
 });
 
-// Today header handling
-// keep at bottom
+// Mathematics Header
 ScrollTrigger.create({
   trigger: ".math-tag",
   start: "top 40%",
@@ -110,8 +139,21 @@ ScrollTrigger.create({
   scroller: ".banner",
 });
 
-// Tomorrow header handling
-// keep at bottom
+gsap.to(".math-tag", {
+  color: "#dfd3c2",
+  opacity: 0.3,
+  scrollTrigger: {
+    start: "top 40%",
+    // endTrigger: ".presenter-tag",
+    end: "bottom 40%",
+    markers: true,
+    trigger: ".math-tag",
+    scroller: ".banner",
+    scrub: true,
+  },
+});
+
+// Presenter Header
 ScrollTrigger.create({
   trigger: ".presenter-tag",
   start: "top 40%",
@@ -123,6 +165,7 @@ ScrollTrigger.create({
   scroller: ".banner",
 });
 
+// Badass Header
 ScrollTrigger.create({
   trigger: ".badass-tag",
   start: "top 40%",
@@ -130,7 +173,7 @@ ScrollTrigger.create({
   end: "bottom bottom-=50",
   pin: true,
   pinSpacing: false,
-  markers: true,
+  // markers: true,
   scroller: ".banner",
 });
 
