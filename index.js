@@ -174,7 +174,7 @@ gsap.from(".maths-text", {
     scroller: ".banner",
     start: "top 60%",
     end: "bottom 40%",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -183,23 +183,48 @@ ScrollTrigger.create({
   trigger: ".presenter-tag",
   start: "top 40%",
   endTrigger: ".badass-tag",
-  end: "bottom bottom-=75",
+  end: "+=400",
   pin: true,
   pinSpacing: false,
   // markers: true,
   scroller: ".banner",
 });
 
+gsap.to(".box-expand", {
+  backgroundColor: "#133A74",
+  scrollTrigger: {
+    trigger: ".presenter-tag",
+    scroller: ".banner",
+    start: "top 40%",
+    // scrub: true,
+    // markers: true,
+  },
+});
+
 // Badass Header
 ScrollTrigger.create({
   trigger: ".badass-tag",
-  start: "top 40%",
+  start: "top 30%",
   endTrigger: ".end-hlt",
   end: "bottom bottom-=50",
   pin: true,
   pinSpacing: false,
   // markers: true,
   scroller: ".banner",
+});
+
+gsap.to(".bad-icon", {
+  width: 100,
+  x: 350,
+  rotate: 20,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".bad-icon",
+    start: "top 50%",
+    end: "top 70%",
+    markers: true,
+    scroller: ".banner",
+  },
 });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
