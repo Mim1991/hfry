@@ -163,16 +163,30 @@ body {
 }
 
 .maths-text {
-  width: 700px;
+  width: 650px;
   position: absolute;
-  top: 1900px;
-  left: 775px;
+  top: 2050px;
+  left: 172px;
   font-size: 29px;
+}
+
+.maths-text p {
+  overflow: hidden;
+  font-size: 30px;
+  height: 45px;
 }
 
 .hf-pink {
   width: 800px;
-  margin-right: 490px;
-  margin-top: 200px;
+  margin-right: 360px;
+  margin-top: 160px;
+  box-shadow: 0px 4px 16px 7px #00000017;
+}
+
+.hf-blue {
+  width: 400px;
+  position: absolute;
+  top: 1740;
+  left: 870;
   box-shadow: 0px 4px 16px 7px #00000017;
 }

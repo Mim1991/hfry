@@ -146,13 +146,41 @@ gsap.to(".math-tag", {
   scrollTrigger: {
     start: "top 40%",
     // endTrigger: ".presenter-tag",
-    end: "bottom 40%",
+    end: "+=900",
     // markers: true,
     trigger: ".math-tag",
     scroller: ".banner",
     scrub: true,
   },
 });
+
+// gsap.fromTo(
+//   ".math-tag",
+//   {
+//     opacity: 1,
+//     scrollTrigger: {
+//       start: "top 40%",
+//       // endTrigger: ".presenter-tag",
+//       end: "bottom 20%",
+//       markers: true,
+//       trigger: ".hf-blue",
+//       scroller: ".banner",
+//       scrub: true,
+//     },
+//   },
+//   {
+//     opacity: 0,
+//     scrollTrigger: {
+//       start: "top 40%",
+//       // endTrigger: ".presenter-tag",
+//       end: "bottom 20%",
+//       markers: true,
+//       trigger: ".hf-blue",
+//       scroller: ".banner",
+//       scrub: true,
+//     },
+//   }
+// );
 
 gsap.from(".hf-pink", {
   opacity: 0,
@@ -166,17 +194,25 @@ gsap.from(".hf-pink", {
   },
 });
 
-gsap.from(".maths-text", {
-  opacity: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".maths-text",
-    scroller: ".banner",
-    start: "top 60%",
-    end: "bottom 40%",
-    // markers: true,
+var mathsTextTl = gsap.timeline({
+  defaults: {
+    paddingTop: 60,
+    scrollTrigger: {
+      trigger: ".mt-one",
+      scroller: ".banner",
+      markers: true,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: true,
+    },
   },
 });
+
+mathsTextTl
+  .from(".mt-one", { duration: 3 })
+  .from(".mt-two", {})
+  .from(".mt-three", {})
+  .from(".mt-four", {});
 
 // Presenter Header
 ScrollTrigger.create({
@@ -222,8 +258,19 @@ gsap.to(".bad-icon", {
     trigger: ".bad-icon",
     start: "top 50%",
     end: "top 70%",
-    markers: true,
+    // markers: true,
     scroller: ".banner",
+  },
+});
+
+gsap.to(".box-expand", {
+  backgroundColor: "#269B69",
+  scrollTrigger: {
+    trigger: ".badass-tag",
+    scroller: ".banner",
+    start: "top 40%",
+    // scrub: true,
+    // markers: true,
   },
 });
 
