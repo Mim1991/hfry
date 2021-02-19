@@ -53,7 +53,7 @@ gsap.fromTo(
   {
     y: -100,
     scale: 0.9,
-    opacity: 0.5,
+    // opacity: 0.5,
   },
   {
     y: 0,
@@ -83,21 +83,19 @@ tlTwo
     "-=1"
   );
 
-// gsap.to(".color-change, .color-change h1", {
-//   backgroundColor: "#EFBEAC",
-//   color: "#C44319",
-//   overwrite: "all",
-//   duration: 1,
-//   scrollTrigger: {
-//     markers: true,
-//     start: "top 90%",
-//     end: "+=10",
-//     ease: "Power1",
-//     scroller: ".banner",
-//     trigger: ".textone",
-//     scrub: true,
-//   },
-// });
+// Scroller
+gsap.to(".scroller-icon", {
+  rotation: 360,
+  scrollTrigger: {
+    trigger: ".scroller-icon",
+    start: "top 80%",
+    end: "+=800",
+    // markers: true,
+    scroller: ".banner",
+    scrub: true,
+  },
+});
+
 // Shadow box
 gsap.to(".shadow", {
   height: 600,
@@ -244,7 +242,6 @@ gsap.to(".presenter-tag", {
     start: "top 60%",
     // endTrigger: ".presenter-tag",
     end: "+=900",
-    markers: true,
 
     scroller: ".banner",
     scrub: true,
@@ -274,41 +271,40 @@ presenterTextTl
   .from(".pt-six", {});
 
 // Badass Header
-// ScrollTrigger.create({
-//   trigger: ".badass-tag",
-//   start: "top 30%",
-//   endTrigger: ".end-hlt",
-//   end: "bottom bottom-=50",
-//   pin: true,
-//   pinSpacing: false,
-//   // markers: true,
-//   scroller: ".banner",
-// });
+ScrollTrigger.create({
+  trigger: ".badass-tag",
+  start: "top 30%",
+  endTrigger: ".end-hlt",
+  end: "bottom bottom-=50",
+  pin: true,
+  pinSpacing: false,
+  // markers: true,
+  scroller: ".banner",
+});
 
-// gsap.to(".bad-icon", {
-//   width: 100,
-//   x: 350,
-//   rotate: 20,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".bad-icon",
-//     start: "top 50%",
-//     end: "top 70%",
-//     // markers: true,
-//     scroller: ".banner",
-//   },
-// });
+gsap.to(".box-expand", {
+  backgroundColor: "#269B69",
+  scrollTrigger: {
+    trigger: ".badass-tag",
+    scroller: ".banner",
+    start: "top 40%",
+    // scrub: true,
+    // markers: true,
+  },
+});
 
-// gsap.to(".box-expand", {
-//   backgroundColor: "#269B69",
-//   scrollTrigger: {
-//     trigger: ".badass-tag",
-//     scroller: ".banner",
-//     start: "top 40%",
-//     // scrub: true,
-//     // markers: true,
-//   },
-// });
+gsap.to(".badass-tag", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".badass-tag",
+    start: "top 50%",
+    // endTrigger: ".presenter-tag",
+    end: "+=1200",
+
+    scroller: ".banner",
+    scrub: true,
+  },
+});
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

@@ -38,12 +38,16 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 16px 24px 0px 24px;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-links {
   width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  margin-top: 17px;
+  margin-right: 16px;
 }
 
 .navbar-logo p {
@@ -51,6 +55,12 @@ body {
   font-size: 30px;
   font-family: "Tangerine";
   padding-left: 20px;
+}
+
+.navbar-logo svg {
+  width: 61px;
+  margin-left: 42px;
+  margin-top: -6px;
 }
 
 .navbar-links p {
@@ -85,20 +95,21 @@ body {
 }
 
 .hero-title-container {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
-  margin-right: 140px;
-  margin-top: 50px;
+  top: 43px;
+  position: absolute;
+  left: -20px;
 }
 
 .hero-image {
   height: 90vh;
   position: absolute;
   bottom: 0;
-  left: 70px;
+  left: 280px;
+  z-index: 2;
 }
 
 .hero-title {
@@ -148,7 +159,16 @@ body {
 
 .ht-one {
   font-size: 140px;
-  height: 153px;
+  height: 275px;
+}
+.ht-two {
+  height: 227px;
+}
+
+.scroller-icon {
+  position: absolute;
+  left: 100px;
+  top: 500px;
 }
 
 .maths-block {
@@ -197,6 +217,7 @@ body {
   width: 400px;
   /* right: 100px;
   margin-bottom: 300px; */
+  box-shadow: 0px 4px 16px 7px #272131b3;
 }
 
 .presenter-block {
@@ -214,7 +235,7 @@ body {
   top: 900;
   right: -22;
   position: absolute;
-  box-shadow: 0px 4px 16px 7px #00000017;
+  box-shadow: 0px 4px 16px 7px #272131b3;
 }
 
 .hf-presenter-two {
@@ -223,7 +244,7 @@ body {
   position: absolute;
   top: 960px;
   left: 150;
-  box-shadow: 0px 4px 16px 7px #00000017;
+  box-shadow: 0px 4px 16px 7px #272131b3;
 }
 
 .hf-stage {
@@ -231,7 +252,7 @@ body {
   top: 1300;
   position: absolute;
   right: -40px;
-  box-shadow: 0px 4px 16px 7px #00000017;
+  box-shadow: 0px 4px 16px 7px #272131b3;
 }
 
 .presenter-text {
@@ -247,4 +268,26 @@ body {
   overflow: hidden;
   font-size: 30px;
   height: 45px;
+}
+
+.badass-block {
+  margin-top: 800px;
+  position: relative;
+}
+
+.hf_tach {
+  width: 800px;
+  position: absolute;
+  top: 1346;
+  left: 510;
+  z-index: 2;
+  box-shadow: 0px 4px 16px 7px #23312c63;
+}
+
+.hf_kids {
+  width: 500px;
+  position: absolute;
+  top: 1200;
+  left: 90;
+  box-shadow: 0px 4px 16px 7px #23312c63;
 }
