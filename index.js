@@ -200,9 +200,9 @@ var mathsTextTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".mt-one",
       scroller: ".banner",
-      markers: true,
-      start: "top 80%",
-      end: "top 50%",
+      // markers: true,
+      start: "top 70%",
+      end: "top 40%",
       scrub: true,
     },
   },
@@ -217,9 +217,9 @@ mathsTextTl
 // Presenter Header
 ScrollTrigger.create({
   trigger: ".presenter-tag",
-  start: "top 40%",
-  endTrigger: ".badass-tag",
-  end: "+=400",
+  start: "top 60%",
+  // endTrigger: ".badass-tag",
+  end: "+=1200",
   pin: true,
   pinSpacing: false,
   // markers: true,
@@ -231,48 +231,84 @@ gsap.to(".box-expand", {
   scrollTrigger: {
     trigger: ".presenter-tag",
     scroller: ".banner",
-    start: "top 40%",
+    start: "top 60%",
     // scrub: true,
     // markers: true,
   },
 });
+
+gsap.to(".presenter-tag", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".presenter-tag",
+    start: "top 60%",
+    // endTrigger: ".presenter-tag",
+    end: "+=900",
+    markers: true,
+
+    scroller: ".banner",
+    scrub: true,
+  },
+});
+
+var presenterTextTl = gsap.timeline({
+  defaults: {
+    paddingTop: 60,
+    scrollTrigger: {
+      trigger: ".pt-one",
+      scroller: ".banner",
+      // markers: true,
+      start: "top 70%",
+      end: "top 20%",
+      scrub: true,
+    },
+  },
+});
+
+presenterTextTl
+  .from(".pt-one", {})
+  .from(".pt-two", {})
+  .from(".pt-three", {})
+  .from(".pt-four", {})
+  .from(".pt-five", {})
+  .from(".pt-six", {});
 
 // Badass Header
-ScrollTrigger.create({
-  trigger: ".badass-tag",
-  start: "top 30%",
-  endTrigger: ".end-hlt",
-  end: "bottom bottom-=50",
-  pin: true,
-  pinSpacing: false,
-  // markers: true,
-  scroller: ".banner",
-});
+// ScrollTrigger.create({
+//   trigger: ".badass-tag",
+//   start: "top 30%",
+//   endTrigger: ".end-hlt",
+//   end: "bottom bottom-=50",
+//   pin: true,
+//   pinSpacing: false,
+//   // markers: true,
+//   scroller: ".banner",
+// });
 
-gsap.to(".bad-icon", {
-  width: 100,
-  x: 350,
-  rotate: 20,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".bad-icon",
-    start: "top 50%",
-    end: "top 70%",
-    // markers: true,
-    scroller: ".banner",
-  },
-});
+// gsap.to(".bad-icon", {
+//   width: 100,
+//   x: 350,
+//   rotate: 20,
+//   duration: 2,
+//   scrollTrigger: {
+//     trigger: ".bad-icon",
+//     start: "top 50%",
+//     end: "top 70%",
+//     // markers: true,
+//     scroller: ".banner",
+//   },
+// });
 
-gsap.to(".box-expand", {
-  backgroundColor: "#269B69",
-  scrollTrigger: {
-    trigger: ".badass-tag",
-    scroller: ".banner",
-    start: "top 40%",
-    // scrub: true,
-    // markers: true,
-  },
-});
+// gsap.to(".box-expand", {
+//   backgroundColor: "#269B69",
+//   scrollTrigger: {
+//     trigger: ".badass-tag",
+//     scroller: ".banner",
+//     start: "top 40%",
+//     // scrub: true,
+//     // markers: true,
+//   },
+// });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

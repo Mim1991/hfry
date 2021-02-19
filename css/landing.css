@@ -112,7 +112,7 @@ body {
 }
 
 .part-two {
-  min-height: 500vh;
+  min-height: 700vh;
   width: 100%;
   background-color: #030303;
   display: flex;
@@ -189,4 +189,62 @@ body {
   top: 1740;
   left: 870;
   box-shadow: 0px 4px 16px 7px #00000017;
+}
+
+.hf-presenter {
+  position: absolute;
+  top: 800px;
+  width: 400px;
+  /* right: 100px;
+  margin-bottom: 300px; */
+}
+
+.presenter-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.presenter-tag svg {
+  margin-top: -170px;
+}
+
+.show-gif {
+  width: 680px;
+  top: 900;
+  right: -22;
+  position: absolute;
+  box-shadow: 0px 4px 16px 7px #00000017;
+}
+
+.hf-presenter-two {
+  z-index: 3;
+  width: 490px;
+  position: absolute;
+  top: 960px;
+  left: 150;
+  box-shadow: 0px 4px 16px 7px #00000017;
+}
+
+.hf-stage {
+  width: 500px;
+  top: 1300;
+  position: absolute;
+  right: -40px;
+  box-shadow: 0px 4px 16px 7px #00000017;
+}
+
+.presenter-text {
+  width: 612px;
+  position: absolute;
+  top: 1290px;
+  left: 143px;
+  font-size: 29px;
+}
+
+.presenter-text p {
+  color: #dfd3c2;
+  overflow: hidden;
+  font-size: 30px;
+  height: 45px;
 }
