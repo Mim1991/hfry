@@ -194,7 +194,7 @@ gsap.from(".hf-pink", {
 
 var mathsTextTl = gsap.timeline({
   defaults: {
-    paddingTop: 60,
+    paddingTop: 80,
     scrollTrigger: {
       trigger: ".mt-one",
       scroller: ".banner",
@@ -207,7 +207,7 @@ var mathsTextTl = gsap.timeline({
 });
 
 mathsTextTl
-  .from(".mt-one", { duration: 3 })
+  .from(".mt-one", { duration: 3, paddingTop: 100 })
   .from(".mt-two", {})
   .from(".mt-three", {})
   .from(".mt-four", {});
@@ -250,7 +250,7 @@ gsap.to(".presenter-tag", {
 
 var presenterTextTl = gsap.timeline({
   defaults: {
-    paddingTop: 60,
+    paddingTop: 80,
     scrollTrigger: {
       trigger: ".pt-one",
       scroller: ".banner",
@@ -262,8 +262,21 @@ var presenterTextTl = gsap.timeline({
   },
 });
 
+gsap.from(".svg-pres", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".svg-pres",
+    scroller: ".banner",
+    // markers: true,
+    start: "top 50%",
+    end: "top 10%",
+    scrub: true,
+    markers: true,
+  },
+});
+
 presenterTextTl
-  .from(".pt-one", {})
+  .from(".pt-one", { paddingTop: 100 })
   .from(".pt-two", {})
   .from(".pt-three", {})
   .from(".pt-four", {})
