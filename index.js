@@ -29,7 +29,6 @@ ScrollTrigger.scrollerProxy(".banner", {
     : "fixed",
 });
 
-// Loading Screen
 gsap.from(".logo-screen", {
   paddingTop: 300,
   duration: 1,
@@ -212,6 +211,17 @@ mathsTextTl
   .from(".mt-three", {})
   .from(".mt-four", {});
 
+gsap.from(".svg-maths", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".svg-maths",
+    scroller: ".banner",
+    start: "top 60%",
+    end: "top 20%",
+    scrub: true,
+  },
+});
+
 // Presenter Header
 ScrollTrigger.create({
   trigger: ".presenter-tag",
@@ -255,23 +265,10 @@ var presenterTextTl = gsap.timeline({
       trigger: ".pt-one",
       scroller: ".banner",
       // markers: true,
-      start: "top 70%",
-      end: "top 20%",
+      start: "top 80%",
+      end: "top 30%",
       scrub: true,
     },
-  },
-});
-
-gsap.from(".svg-pres", {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".svg-pres",
-    scroller: ".banner",
-    // markers: true,
-    start: "top 50%",
-    end: "top 10%",
-    scrub: true,
-    markers: true,
   },
 });
 
@@ -282,6 +279,19 @@ presenterTextTl
   .from(".pt-four", {})
   .from(".pt-five", {})
   .from(".pt-six", {});
+
+gsap.from(".svg-pres", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".svg-pres",
+    scroller: ".banner",
+    // markers: true,
+    start: "top 60%",
+    end: "top 20%",
+    scrub: true,
+    // markers: true,
+  },
+});
 
 // Badass Header
 ScrollTrigger.create({
@@ -315,6 +325,39 @@ gsap.to(".badass-tag", {
     end: "+=1200",
 
     scroller: ".banner",
+    scrub: true,
+  },
+});
+
+var badassTextTl = gsap.timeline({
+  defaults: {
+    paddingTop: 85,
+    scrollTrigger: {
+      trigger: ".bt-one",
+      scroller: ".banner",
+      // markers: true,
+      start: "top 90%",
+      end: "top 40%",
+      scrub: true,
+    },
+  },
+});
+
+badassTextTl
+  .from(".bt-one", { paddingTop: 120 })
+  .from(".bt-two", {})
+  .from(".bt-three", {})
+  .from(".bt-four", {})
+  .from(".bt-five", {})
+  .from(".bt-six", {});
+
+gsap.from(".svg-badass", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".svg-badass",
+    scroller: ".banner",
+    start: "top 60%",
+    end: "top 20%",
     scrub: true,
   },
 });
