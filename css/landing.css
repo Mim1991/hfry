@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Benne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Brawler&family=Poppins:wght@300;400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -94,6 +95,7 @@ body {
   height: 150px;
   position: absolute;
   bottom: 0;
+  z-index: 2;
 }
 
 .hero-title-container {
@@ -195,48 +197,48 @@ body {
 
 .maths-text p {
   overflow: hidden;
-  font-size: 30px;
+  font-size: 27px;
   height: 38px;
-  font-family: "Benne";
+  font-family: "Brawler";
 }
 
 .maths-text svg {
   position: absolute;
-  top: -92px;
+  top: -68px;
   height: 100;
   width: 100;
 }
 
 #mt-one {
-  font-family: "Bebas Neue";
+  font-family: "Poppins";
   font-size: 100px !important;
   letter-spacing: 2px;
-  height: 98px;
+  height: 116px;
 }
 
 #pt-one {
-  font-family: "Bebas Neue";
+  font-family: "Poppins";
   font-size: 100px !important;
   letter-spacing: 2px;
-  height: 102px;
+  height: 115px;
 }
 
 #bt-one {
-  font-family: "Bebas Neue";
-  font-size: 80px !important;
+  font-family: "Poppins";
+  font-size: 65px !important;
   letter-spacing: 2px;
-  height: 92px;
+  height: 90px;
 }
 
 .presenter-text p {
   overflow: hidden;
   font-size: 30px;
   height: 38px;
-  font-family: "Benne";
+  font-family: "Brawler";
 }
 .presenter-text svg {
   position: absolute;
-  top: -90px;
+  top: -65px;
   height: 100;
   width: 100;
 }
@@ -252,7 +254,7 @@ body {
   overflow: hidden;
   font-size: 30px;
   height: 38px;
-  font-family: "Benne";
+  font-family: "Brawler";
   color: #dfd3c2;
 }
 .badass-text svg {
@@ -324,8 +326,8 @@ body {
 .presenter-text {
   width: 700px;
   position: absolute;
-  top: 1290px;
-  left: 143px;
+  top: 1280px;
+  left: 30px;
   font-size: 29px;
 }
 
