@@ -192,7 +192,7 @@ body {
   position: absolute;
   top: 2067px;
   left: 172px;
-  font-size: 29px;
+  font-size: 24px;
 }
 
 .maths-text p {
@@ -218,14 +218,14 @@ body {
 
 #pt-one {
   font-family: "Poppins";
-  font-size: 100px !important;
+  font-size: 90px !important;
   letter-spacing: 2px;
   height: 115px;
 }
 
 #bt-one {
   font-family: "Poppins";
-  font-size: 65px !important;
+  font-size: 60px !important;
   letter-spacing: 2px;
   height: 90px;
 }
@@ -252,7 +252,7 @@ body {
 }
 .badass-text p {
   overflow: hidden;
-  font-size: 30px;
+  font-size: 25px;
   height: 38px;
   font-family: "Brawler";
   color: #dfd3c2;
@@ -334,7 +334,7 @@ body {
 .presenter-text p {
   color: #dfd3c2;
   overflow: hidden;
-  font-size: 30px;
+  font-size: 25px;
   height: 45px;
 }
 
